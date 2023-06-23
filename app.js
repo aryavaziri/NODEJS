@@ -1,17 +1,20 @@
 const express = require('express');
+const bodyParser = require('body-parser')
 const app = express()
+
+app.set('view engine', 'ejs');
+
+const errorController = require('./controllers/errors')
+
+const adminRoutes = require('./routes/admin')
+const shopRoutes = require('./routes/shop')
+
+app.use(bodyParser.urlencoded({ extended: false }))
 app.use(express.static(__dirname + "/static"))
 
+app.use(adminRoutes.router)
+app.use(shopRoutes)
 
-const http = require('node:http');
+app.use(errorController.get404)
 
-const hostname = '127.0.0.1';
-const port = 3000;
-
-app.get('/', (req, res) => {
-    res.send("HELLO WORLDDDDDD")
-})
-
-app.listen(port, hostname, () => {
-    console.log(`Server running at http://${hostname}:${port}/`);
-});
+app.listen(3000);
