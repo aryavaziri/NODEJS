@@ -1,35 +1,7 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-    list-style-type: none;
-    text-decoration: none !important;
+a.active {
+    font-weight: bolder;
 }
 
-a:visited {
-    color: inherit;
-}
-
-.header {
-    background: #26637d;
-    color: black;
-    padding: 0 5%;
-}
-
-.header ul {
-    display: flex;
-}
-
-.header li {
-    padding: 10px 20px 10px 0;
-    color: white;
-}
-
-.header li:hover {
-    color: gray;
-}
-
-main {
-    padding: 5px 5%;
+.header li>a.active {
+    font-size: 20px;
 }

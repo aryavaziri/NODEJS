@@ -1,0 +1,22 @@
+<%- include('../includes/head.ejs') %>
+<!-- <link rel="stylesheet" href="/css/main.css"> -->
+<%- include('../includes/navigation.ejs') %>
+<main class="px-8">
+  <div class="border">
+    <span>My Card</span>
+    <div>
+      <% if (card.products.length>0) { %>
+        <% for (let product of card.products) {%>
+          <span>product</span>
+          <% } %>
+        <% } else {%>
+          <h2>No Products</h2>
+        <% } %>
+        
+      </div>
+
+    <span>Total Price: <%= card.totalPrice %></span>
+  </div>
+
+</main>
+<%- include('../includes/end.ejs') %>

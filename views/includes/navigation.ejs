@@ -1,10 +1,15 @@
 </head>
 <body>
-  <header>
-    <nav class="header">
-      <ul>
-        <li><a href="/">Shop</a></li>
-        <li><a href="/add-products">Add Product</a></li>
+  <header class="px-10 py-3 bg-teal-700">
+    <nav>
+      <ul class="flex flex-row">
+        <li class="px-4 text-gray-300 hover:text-amber-300"><a class="<%= path === '/' ? 'active' : '' %>" href="/">Home</a></li>
+        <li class="px-4 text-gray-300 hover:text-amber-300"><a class="<%= path === '/products-list' ? 'active' : '' %>" href="/products-list">Shop</a></li>
+        <li class="px-4 text-gray-300 hover:text-amber-300"><a class="<%= path === '/admin/add-product' ? 'active' : '' %>" href="/admin/edit-product">Add Product</a></li>
+        <li class="px-4 text-gray-300 hover:text-amber-300"><a class="<%= path === '/products' ? 'active' : '' %>" href="/product-details">Details</a></li>
+        <li class="px-4 text-gray-300 hover:text-amber-300"><a class="<%= path === '/card' ? 'active' : '' %>" href="/card">Card</a></li>
+        <li class="px-4 text-gray-300 hover:text-amber-300"><a class="<%= path === '/checkout' ? 'active' : '' %>" href="/checkout">Checkout</a></li>
+        <li class="px-4 text-gray-300 hover:text-amber-300"><a class="<%= path === '/admin/products' ? 'active' : '' %>" href="/admin/products">Admin Products</a></li>
       </ul>
     </nav>
   </header>
